@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PraFazê!</title>
-    <link rel="Stylesheet" href="index.css">
+    <link rel="Stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.svg">
 
 </head>
 <body>
       
+    <div class="dark_mode"></div>
+        <div class="container" id="normal-mode">
+            <button onclick="darkmode()" class="darkb">alternar modo</button>
+            <div class="logo">
+                <h2>PraFazê! <img src="img/Vector.svg"></h2>
+                <div class="row">
+                    <input  type="text" id="input-box" placeholder="Nova Tarefa"   onkeypress="addkey(event)">
+                <button id="myBtn" onclick="addTask()"  class="fill" >adcionar</button>   
+                
+            </div>
+                <div class="task">
+                   <ul id="list-container">
+                       <!-- <li class="checked">tarefa 1</li>
+                        <li>tarefa 2</li>
+                        <li>tarefa 3</li> -->
+                    </ul>
+            </div>    
+            </div>
 
-    <div class="container">
-        <div class="logo">
-            <h2>PraFazê <img src="img/icon.png"></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Nova Tarefa">
-            <button class="fill" >adcionar</button>   
-             
         </div>
-          <!-- <ul id="list-container">
-                <li>tarefa 1</li>
-                <li>tarefa 2</li>
-                <li>tarefa 3</li>
-            </ul>-->
-        </div>
-        
     </div>
+<script src="script.js"></script>    
 </body>
 </html>

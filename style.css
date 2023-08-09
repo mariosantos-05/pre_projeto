@@ -4,12 +4,27 @@
     font-family: Montserrat;
     box-sizing: border-box;
 }
+*::selection {
+    color: rgb(255, 255, 255);
+    background: #de6c5c;
+}
 
 .container{
     width: 100%;
     min-height: 100vh;
     padding: 10px;
     background-color: #ffffff;
+    display: flexbox;
+}
+
+.dark-mode{
+    background-color: #383736;
+    color: #FFF;
+
+}
+
+.dark-mode .logo{
+    background: #383736;
 }
 
 .logo{
@@ -19,6 +34,10 @@
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
+}
+
+.dark-mode .logo h2{
+    color: #FFF;
 }
 
 .logo h2{
@@ -34,11 +53,10 @@
     line-height: 18px; /* 37.5% */
     letter-spacing: 0.96px;
 }
-/*.todo-app h2 img{
-    width: 30px;
-    margin-left: 10px;
-}*/
 
+.dark-mode .logo img{
+    filter: invert(90%);
+}
 .row{
     display: flex;
     padding: 12px 48px 12px 14px;
@@ -49,6 +67,10 @@
     border-radius: 30px;
     border: 2px solid var(--black, #1B1B1B);
     background: var(--white, #FFF);
+}
+.dark-mode .row{
+    border: 2px solid var(--black, #ffffff);
+    background: var(--white, #383736);
 }
 
 input{
@@ -61,6 +83,9 @@ input{
     font-size: 18px;
 }
 
+.dark-mode input{
+    color: #FFF;
+}
 
 
 input::selection {
@@ -88,6 +113,10 @@ button {
   -webkit-transition: 0.08s ease-in;
 }
 
+.dark-mode button{
+    color: #FFF;
+}
+
 .fill:hover {
   color: whitesmoke;
 }
@@ -108,13 +137,25 @@ button {
   top: 0;
 }
 
+
+.task{
+    width: 100%;
+    max-width: 600px;
+}
+
 ul li{
     list-style: none;
+    text-align:left;
     font-size: 17px;
     user-select: none;
-    padding: 12 px 8px 12px 50px;
+    padding: 12px 8px 12px 50px;
     cursor: pointer;
     position: relative;
+    align-content: center;
+}
+
+.dark-mode ul li{
+    color: #FFF;
 }
 
 ul li::before{
@@ -126,6 +167,42 @@ ul li::before{
     background-image: url(img/unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 12px;
+    top: 9.5px;
     left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+
+
+ul li.checked::before{
+    background-image: url(img/checked.svg);
+}
+
+
+
+ul li span{
+    position: absolute;
+    right: 5%;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align:center;
+    border-radius: 30%;
+
+}
+
+.dark-mode ul li span{
+    color: #fff;
+}
+
+ul li span:hover{
+    background: #de6c5c;
+    color: whitesmoke;
 }
