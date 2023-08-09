@@ -19,16 +19,25 @@
                     <input  type="text" id="input-box" placeholder="Nova Tarefa"   onkeypress="addkey(event)">
                 <button id="myBtn" onclick="addTask()"  class="fill" >adcionar</button>   
                 
+                </div>
+                    <div class="task">
+                       <ul id="list-container" class="tarefas">
+                           <!-- <li class="checked">tarefa 1</li>
+                            <li>tarefa 2</li>
+                            <li>tarefa 3</li> -->
+                        </ul>
+                </div>    
             </div>
-                <div class="task">
-                   <ul id="list-container">
-                       <!-- <li class="checked">tarefa 1</li>
-                        <li>tarefa 2</li>
-                        <li>tarefa 3</li> -->
-                    </ul>
-            </div>    
+            <div id="myProgress">
+                <div id="myBar"></div>
+              </div>
+            <div class="bar">
+                <!--<p class="restantes">6 restantes</p>-->
+                <button class="tudo" >tudo</button>
+                <button class="ativas"  >ativas</button>
+                <button  class="completas">completas</button>
+                <button  class="limpar"  >limpar completas</button>
             </div>
-
         </div>
     </div>
 <script src="script.js"></script>    

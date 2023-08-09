@@ -28,11 +28,13 @@
 }
 
 .logo{
+    align-content: center;
+    position: relative;
     width: 100%;
     max-width: 540px;
     background: #fff;
     margin: 100px auto 20px;
-    padding: 40px 30px 70px;
+    padding: 40px 30px 10px;
     border-radius: 10px;
 }
 
@@ -143,6 +145,12 @@ button {
     max-width: 600px;
 }
 
+.tarefas{
+    position: relative;
+    padding-bottom: 10%;
+}
+
+
 ul li{
     list-style: none;
     text-align:left;
@@ -206,3 +214,69 @@ ul li span:hover{
     background: #de6c5c;
     color: whitesmoke;
 }
+
+.bar{
+
+    top: 90%;
+    left: 3%;
+    bottom: -10%;
+    width: 95%;
+    position: relative;
+    display: inline-block;
+    border-top: 2px #000 solid;
+    align-items: center;
+    align-content: center;
+
+
+
+}
+.dark-mode .bar{
+    border-color: #ffffff;
+}
+
+/*.bar p{
+    float: left;
+    //padding-top: 2%;
+    //padding-left: 2%;
+    font-weight: 15px;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #383736;
+}*/
+
+.bar .tudo{
+    font-size: 11px;
+    //padding-left: 35%;
+}
+
+.bar .ativas{
+    font-size: 11px;
+}
+
+.bar .completas{
+    font-size: 11px;
+    //padding: 0%;
+}
+
+
+.bar .limpar{
+    float: right;
+    font-size: 11px;
+    //padding-inline-end: 10;
+
+}
+
+
+
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+  }
