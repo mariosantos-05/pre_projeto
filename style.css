@@ -10,11 +10,102 @@
 }
 
 .container{
+    position: relative;
     width: 100%;
     min-height: 100vh;
     padding: 10px;
     background-color: #ffffff;
     display: flexbox;
+}
+
+.navbar{
+    position: sticky;
+    top: 90%;
+}
+
+
+
+.bar{   
+    bottom: 2%;            
+    width: 95%;
+    position: sticky;
+    display: inline-block;
+    /*border-top: 2px #000 solid;*/
+    align-items: center;
+    align-content: center;
+
+
+
+}
+.dark-mode .bar{
+    border-color: #ffffff;
+}
+
+/*.bar p{
+    float: left;
+    //padding-top: 2%;
+    //padding-left: 2%;
+    font-weight: 15px;
+    font-size: 11px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #383736;
+}*/
+
+.bar .tudo{
+    border-radius: 15px;
+    font-size: 11px;
+}
+
+.bar .tudo:hover{
+    font-size: 12.5px;
+}
+
+.bar .ativas{
+    border-radius: 15px;
+    font-size: 11px;
+}
+
+.bar .ativas:hover{
+    font-size: 12.5px;
+}
+
+.bar .completas{
+    border-radius: 15px;
+    font-size: 11px;
+}
+
+.bar .completas:hover{
+    font-size: 12.5px;
+}
+
+
+.bar .limpar{
+    border-radius: 15px;
+    float: right;
+    font-size: 11px;
+
+}
+
+.bar .limpar:hover{
+    font-size: 12.5px;
+}
+
+#myProgress { 
+    border-radius: 16px;
+    width: 100%;
+    background-color: rgb(220, 220, 220);
+}
+
+
+.dark-mode #myProgress{
+    background-color: #555;
+}
+
+#myBar {
+  width: 1%;
+  height: 5px;
+  background-color: #de6c5c;
 }
 
 .dark-mode{
@@ -215,68 +306,3 @@ ul li span:hover{
     color: whitesmoke;
 }
 
-.bar{
-
-    top: 90%;
-    left: 3%;
-    bottom: -10%;
-    width: 95%;
-    position: relative;
-    display: inline-block;
-    border-top: 2px #000 solid;
-    align-items: center;
-    align-content: center;
-
-
-
-}
-.dark-mode .bar{
-    border-color: #ffffff;
-}
-
-/*.bar p{
-    float: left;
-    //padding-top: 2%;
-    //padding-left: 2%;
-    font-weight: 15px;
-    font-size: 11px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #383736;
-}*/
-
-.bar .tudo{
-    font-size: 11px;
-    //padding-left: 35%;
-}
-
-.bar .ativas{
-    font-size: 11px;
-}
-
-.bar .completas{
-    font-size: 11px;
-    //padding: 0%;
-}
-
-
-.bar .limpar{
-    float: right;
-    font-size: 11px;
-    //padding-inline-end: 10;
-
-}
-
-
-
-
-#myProgress {
-    width: 100%;
-    background-color: grey;
-  }
-  
-  #myBar {
-    width: 1%;
-    height: 30px;
-    background-color: green;
-  }

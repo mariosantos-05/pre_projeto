@@ -53,4 +53,5 @@ showTask();
 function darkmode(){
     var element = document.getElementById("normal-mode");
     element.classList.toggle("dark-mode");
+    localStorage.setItem("data", listContainer.innerHTML);
 }
