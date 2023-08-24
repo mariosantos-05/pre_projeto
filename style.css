@@ -151,6 +151,7 @@
     filter: invert(90%);
 }
 .row{
+    position: relative;
     display: flex;
     padding: 12px 48px 12px 14px;
     justify-content: space-between;
@@ -160,6 +161,11 @@
     border-radius: 30px;
     border: 2px solid var(--black, #1B1B1B);
     background: var(--white, #FFF);
+}
+
+.fill{
+    position: absolute;
+    right: 4%;
 }
 .dark-mode .row{
     border: 2px solid var(--black, #ffffff);
