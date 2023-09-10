@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Noto_Serif_Display } from 'next/font/google'
 
-const inter = Montserrat({ subsets: ['latin'] })
+const inter = Noto_Serif_Display({ subsets: ['latin'], })
 
 export const metadata: Metadata = {
   title: 'TODO app',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: {children: React.ReactNode}) {
   return (
     <html lang="Pt-br">
-      <body className={`${inter.className} bg-slate-100`}>{children}</body>
+      <body className={`${inter.className} bg-[#FFFBDB]`}>{children}</body>
     </html>
   )
 }
