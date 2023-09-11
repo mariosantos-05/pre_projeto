@@ -36,9 +36,7 @@ const Home: React.FC = () =>  {
           value={todo}
           />
           <button className='absolute text-[#383736] bg-inherit p-2 right-6 top-[93px] font-medium uppercase cursor-pointer rounded-3xl hover:text-[#ffffff] hover:bg-[#de6c5c] 
-          transition ease-in-out delay-150 bg-inherit  hover:scale-110 hover:bg-[#de6c5c] duration-100
-
-          '
+          transition ease-in-out delay-150 bg-inherit  hover:scale-110 hover:bg-[#de6c5c] duration-100'
           
           onClick={()  => addTodo()}
           >adcionar</button>
@@ -52,8 +50,9 @@ const Home: React.FC = () =>  {
               todos.map(todo => (
                 <li 
                   onClick={() => markTodoDone(todo.id)}
-                  className={`text-left text-base ml-5 cursor-pointer ${todo.done ? 'line-through ' : 'no-underline'}`}>
+                  className={`text-left text-base ml-5 cursor-pointer  ${todo.done ? 'text-[#555] line-through'  : 'no-underline'}`}>
                   {todo.value}
+                
                 </li>
               ))
             }
@@ -61,15 +60,19 @@ const Home: React.FC = () =>  {
             </ul>
         </div>
         </div>
+      
+
+
+
 
 
       </div>
       
-      <div className="absolute inline content-center bottom-[30px] w-[100vh]">          
-        <button>tudo</button>
-        <button >ativas</button>
-        <button>completas</button>
-        <button>limpar completas</button>
+      <div className="absolute inline content-center bottom-[30px] w-[90%] justify-items-start">          
+        <button className="mr-20 relative transition ease-in-out delay-150 bg-inherit  hover:scale-110 duration-100">tudo</button>
+        <button className="mr-20 relative transition ease-in-out delay-150 bg-inherit  hover:scale-110 duration-100">ativas</button>
+        <button className="relative transition ease-in-out delay-150 bg-inherit  hover:scale-110 duration-100">completas</button>
+        <button className="content-end right-2 absolute transition ease-in-out delay-150 bg-inherit  hover:scale-110 duration-100">limpar completas</button>
       </div>
 
     </main>
