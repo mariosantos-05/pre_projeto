@@ -14,7 +14,7 @@ inputBox.addEventListener("keypress", function(event) {
 
 function addTask(){
     if(inputBox.value === ''){
-        alert("você deve digitar algo!");
+        alert("Você deve digitar algo!");
     }
     else{
         let li = document.createElement("li");

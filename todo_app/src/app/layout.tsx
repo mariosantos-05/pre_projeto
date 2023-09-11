@@ -5,7 +5,7 @@ import { Playfair_Display } from 'next/font/google'
 const inter = Playfair_Display({ subsets: ['latin'], })
 
 export const metadata: Metadata = {
-  title: 'TODO app',
+  title: 'PraFazê!',
   description: 'Created by Mario Santos',
 }
 
