@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import { todoObject } from "./models/Todo";
 import {v4 as uuid} from 'uuid';
 import Image from "next/image";
+import Script from "next/script";
 
 
 const Home: React.FC = () =>  {
@@ -28,7 +29,8 @@ const Home: React.FC = () =>  {
           <h1 className='text-5xl flex font-medium text-left font-Montserrat tracking-wide tracking-wide mb-8 '>PraFazê!<img src="/Vector.svg"/></h1>
         </div> 
         <div className=' h-20'>
-          <input
+          <input 
+          id="input-box"
           type='text'
           placeholder='Nova Tarefa'
           className= 'relative bg-inherit border-2 border-black rounded-full w-full py-5 pl-7'
@@ -44,15 +46,16 @@ const Home: React.FC = () =>  {
         </div>     
 
         <div className="content-center">
-        <div className=" select-none text-center content-center px-12 text-[17px] pb-20">
+        <div className=" select-none text-center content-center  text-[17px] pb-20">
            <ul className='mt-5'>
             {
               todos.map(todo => (
                 <li 
+                  id="list-container"
                   onClick={() => markTodoDone(todo.id)}
                   className={`text-left text-base ml-5 cursor-pointer  ${todo.done ? 'text-[#555] line-through'  : 'no-underline'}`}>
                   {todo.value}
-                
+                  <button className="absolute bg-inherant hover:bg-[#de6c5c] hover:text-white right-2 px-2 rounded transition ease-in-out delay-150 bg-inherit  hover:scale-110 duration-80s ">x</button>
                 </li>
               ))
             }
