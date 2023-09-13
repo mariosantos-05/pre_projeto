@@ -1,8 +1,6 @@
-import './globals.css'
+import '../globals.css'
 import type { Metadata } from 'next'
-import { Playfair_Display } from 'next/font/google'
 
-const inter = Playfair_Display({ subsets: ['latin'], })
 
 export const metadata: Metadata = {
   title: 'PraFazê!',
@@ -16,3 +14,4 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
     </html>
   )
 }
+
