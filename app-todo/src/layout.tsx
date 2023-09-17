@@ -1,6 +1,5 @@
 import '../globals.css'
 import type { Metadata } from 'next'
-import type { Metadata } from 'next'
 import { Playfair_Display } from 'next/font/google'
 
 const inter = Playfair_Display({ subsets: ['latin'], })

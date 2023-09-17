@@ -48,9 +48,15 @@ export default function Home() {
     setTodos(newTodos)
   }
 
+
+
+  const DeleteChecked = () => {
+    const updatedTodos = todo.filter(todo => !todo.isCompleted);
+    setTodos(updatedTodos)
+  }
+
   const [search,setSearch] = useState("");
   const [filter,setFilter] = useState("All");
-  const[sort,setSort] = useState("Asc");
   
   
   return (
@@ -65,15 +71,22 @@ export default function Home() {
             .filter((todo)=>
             todo.text.toLowerCase().includes(search.toLowerCase())
             )
-            .sort((a,b)=> sort ==='Asc' ? a.text.localeCompare(b.text): b.text.localeCompare(a.text))
             .map((todo)=>(
               <TodoApp key ={todo.id} todo ={todo} DeleteTodo = {DeleteTodo} CheckTodo = {CheckTodo}/>
             ))}
 
           </div>
 
-          <Filter filter={filter} setFilter = {setFilter} setSort = {setSort}   className="rounded"/>
+          <Filter filter={filter} setFilter = {setFilter} />
+
+          
         </div>
+        
+        <div className="absolute bottom-10">
+            <button onClick={DeleteChecked}  className="relative rounded-full p-2 border-[2px] dark:border-white dark:text-white">Deletar Completas</button>
+        </div>
+
+        <script src="./dark.js"></script>
     </main>
   )
           }
