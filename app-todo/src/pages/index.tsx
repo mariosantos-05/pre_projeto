@@ -91,7 +91,7 @@ export default function Home() {
   )
           }
 
-function setArray(arg0: (array) => any[]) {
+function setArray(arg0: (array :any) => any[]) {
   throw new Error("Function not implemented.");
 }
 

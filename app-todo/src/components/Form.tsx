@@ -4,7 +4,7 @@ import addTodo from '../pages/index';
 const Form = ({addTodo}: any) => {
     const[value,setValue] = useState("");
    
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         if(!value) return;
         else addTodo(value)

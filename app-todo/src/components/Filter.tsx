@@ -2,7 +2,7 @@ import React from 'react'
 
 import RootLayout from '@/layout'
 
-const Filter = ({filter,setFilter}) => {
+const Filter = ({filter,setFilter}: any) => {
   return (
     <div className='filter'>
         <div className="filter-options rounded p-2">
